@@ -28,4 +28,9 @@ public class EntryController {
     public Entry createEntry(@Valid @RequestBody Entry entry) {
         return entryService.createEntry(entry);
     }
+
+    @DeleteMapping("{id}")
+    public void deleteEntry(@PathVariable Long id){
+        entryService.deleteEntry(id);
+    }
 }
